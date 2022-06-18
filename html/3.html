@@ -1,0 +1,447 @@
+<!doctype html>
+<html>
+<head>
+<title>页面2</title>
+<style type="text/css">
+body1
+{
+  margin: 0;
+  padding: 0;
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #FFF;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0;
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #000;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background:#333;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+body {
+	margin: 0;
+	height: 100%;
+	background:#CAD7DB;
+}
+
+.button_container {
+	position: absolute;
+	left: 439px;
+	top: 618px;
+	width: 190px;
+	height: 125px;
+}
+
+.description, .link {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+}
+
+.description {
+	font-size: 35px;
+	color:#FFF;
+}
+
+.btn {
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 17px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn span {
+  position: relative; 
+  z-index: 1;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #78c7d2;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.link {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.link a {
+  color: #000;
+  font-size: 25px; 
+}
+.a{
+	color:#FFF;
+}	
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+	background:url(123video.gif);
+	background-size:100%;
+	position:relative;
+	background-repeat:no-repeat;
+  color:#FFF;
+}
+
+.container {
+	margin: 0 auto;
+	width: 261px;
+	max-width: 350px;
+	position:fixed;
+	left: 21px;
+	top: 200px;
+	height: 575px;
+}
+
+h2 {
+  padding: 1.8rem 0;
+  
+  font-size: 2.8rem;
+  
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.4);
+  
+}
+
+nav {
+  -webkit-box-flex: auto;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  position: relative;
+  padding: .6125rem .6152rem 1.6125rem;
+} 
+
+li a { 
+  text-decoration: none;
+  color: RGBA(67, 83, 99, 1);
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+ul:hover a {
+  opacity: .8;
+  
+  -webkit-transform: scale(0.97);
+  transform: scale(0.97);
+}
+
+ul a {
+  display: block;
+  position: relative;
+  padding: .75rem 1rem 1rem;
+  
+  -webkit-transition: -webkit-transform .22s,box-shadow .22s;
+  transition: transform .22s,box-shadow .22s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none;
+  box-shadow: 0 0 0 -.25rem rgba(0,0,0,.1);
+}
+
+ul a:focus, ul a:hover {
+  outline: 0;
+  box-shadow: 0 .5rem 0 -.25rem rgba(0,0,0,.1);
+  opacity: 1;
+  -webkit-transform: scale(1.03);
+  transform:scale(1.03);
+  -webkit-transition: -webkit-transform .088s,box-shadow .088s;
+  transition: transform .088s,box-shadow .088s;
+  z-index: 1;
+}
+
+.menu a:nth-child(1) {
+  background: #94bddb;
+}
+.menu a:nth-child(2) {
+  background: #94bddb;
+}
+.menu a:nth-child(3) {
+  background: #94bddb;
+}
+.menu a:nth-child(4) {
+  background: #94b9db;
+}
+.menu a:nth-child(5) {
+  background: #94b5db;
+}
+.menu a:nth-child(6) {
+  background: #94b2db;
+}
+
+.menu a:nth-child(6):hover {
+  cursor: pointer;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+    transform: perspective(400px) rotateX(-10deg);
+  }
+
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    -ms-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+    -ms-transform: perspective(400px) rotateX(-10deg);
+    transform: perspective(400px) rotateX(-10deg);
+  }
+
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    -ms-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    -ms-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.flipInX {
+  -webkit-backface-visibility: visible ;
+  -ms-backface-visibility: visible ;
+  backface-visibility: visible ;
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
+}
+</style>
+</head>
+<body>
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" >
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="../Personal_page.html"><li>个人主页</li></a>
+      <a href="../Personal_information.html"i,><li>个人信息</li></a>
+      <a href="../Ukraine.html"><li>作品1</li></a>
+      <a href="../首页.html"><li>作品2</li></a>
+      <a href="首页3.html"><li>作品3</li></a>
+    </ul>
+  </div>
+<a href="首页3.html"><img src="../image/logo3.png"style="position: absolute; top: 20px; width: 175px; height: 163px; left: 81px;"></a>
+<div class="container ta-c">
+  <nav class="menu animated flipInX">
+		<ul class="no-ls ta-l t-all">
+			<li>
+        <a href="2.html">
+          <h3>1.猴面包树</h3>
+          <p>&nbsp;</p>
+          </a>
+        </li>
+        <li>
+			          <a href="3.html">
+				            <h3>2.夹竹桃</h3>
+				            <p>当前位置</p>
+			          </a>
+        </li>
+        <li>
+			          <a href="4.html">
+				            <h3>3.金皮树</h3>
+				            <p>&nbsp;</p>
+			          </a>
+        </li>
+        <li>
+      			    <a href="5.html">
+				            <h3>4.箭毒木</h3>
+				            <p>&nbsp;</p>
+			          </a>
+        </li>
+    	</ul>
+	 </nav>
+</div>
+<h1 style="position: absolute; left: 450px; top: -11px; height: 187px; width: 469px; color: #000; height: 82px; font-family:隶书 ; font-size: 100px;">夹竹桃</h1>
+<h1 style="position: absolute; left: 293px; top: 585px; height: 187px; width: 969px; color: #000; height: 166px; font-family: 微软雅黑; font-size: 27px;">夹竹桃（学名：Nerium oleander L.）夹竹桃族夹竹桃属常绿直立大灌木，高可达5米，枝条灰绿色，嫩枝条具棱，被微毛，老时毛脱落。叶3-4枚轮生，叶面深绿，叶背浅绿色，中脉在叶面陷入，叶柄扁平，聚伞花序顶生，花冠深红色或粉红色，花冠为单瓣呈5裂时，其花冠为漏斗状，种子长圆形，花期几乎全年，夏秋为最盛；果期一般在冬春季，栽培很少结果。<br>花大、艳丽、花期长，常作观赏；用插条、压条繁殖，极易成活。茎皮纤维为优良混纺原料；种子含油量约为58.5%，可榨油供制润滑油。叶、树皮、根、花、种子均含有多种配糖体，毒性极强，人、畜误食能致死。叶、茎皮可提制强心剂，但有毒，用时需慎重。</h1>
+<img src="../image/夹竹桃/b21c8701a18b87d6a7e019b1090828381e30fdfa.png"width="448" height="278"style="position: absolute; left: 801px; top: 191px; width: 433px; height: 316px;">
+<img src="../image/夹竹桃/1ad5ad6eddc451da23fc89c4d276706fd016322f.jpg"width="487" height="315"style="position: absolute; left: 293px; top: 185px; width: 476px; height: 323px;">
+<h1 style="position: absolute; left: 291px; top: 919px; height: 187px; width: 407px; color: #000; height: 54px; font-family: 微软雅黑; font-size: 37px;">夹竹桃到底有多毒？</h1>
+<h1 style="position: absolute; left: 295px; top: 995px; height: 187px; width: 529px; color: #000; height: 534px; font-family: 微软雅黑; font-size: 27px;">毒？夹竹桃非常容易栽培，在南方地区的生命力比较强，又因为具有较高的观赏价值和美化城市容貌的作用，被纳入城市绿化的植物种类。这种植物的花色十分艳丽，主要呈现粉红色和玫红色，花期比较长，但几乎全身上下都有毒。据研究，夹竹桃的茎、叶、花、皮、种子和汁液都有毒。夹竹桃含有的主要有毒成分是夹竹桃苷，主要作用于人体消化系统和心血管系统。<br><br>无论是人还是动物，误食后都有可能丧命，因为夹竹桃苷是一种毒性很强的毒素。曾有研究发现，一片夹竹桃叶子就可以夺走一个婴儿的生命，10片夹竹桃叶子可能让一个成年人丧命。眼镜王蛇的毒性为每千克3.58毫克，而夹竹桃的毒性是每千克0.5毫克，可见它的毒性比眼镜王蛇强7倍左右。<br><br>
+夹竹桃的毒性还与植物的生长年限相关，越年幼的夹竹桃毒性越强，这可能是它们长期在自然界中生存而演化出的自我防御机制。生长时间越长的夹竹桃毒性越弱，而城市道路和公园栽培的夹竹桃基本都是成年树种，因此毒性相对较弱一些。即使如此，在遇到夹竹桃时还是要小心，不要触碰它的汁液，因为汁液是有毒的。</h1>
+<img src="../image/夹竹桃/d000baa1cd11728b76d83e8cc6fcc3cec2fd2ca2.png"width="437" height="353"style="position: absolute; left: 838px; top: 1480px; width: 442px; height: 354px;">
+<img src="../image/夹竹桃/4034970a304e251f68336138ad86c9177e3e532e.jpg"width="478" height="278"style="position: absolute; left: 827px; top: 1002px; width: 449px; height: 354px;">
+<h1 style="position: absolute; left: 285px; top: 1940px; height: 187px; width: 643px; color: #000; height: 54px; font-family: 微软雅黑; font-size: 37px;">既然夹竹桃有毒，为何还大量种植？</h1>
+<h1 style="position: absolute; left: 888px; top: 2001px; height: 187px; width: 404px; color: #000; height: 54px; font-family: 微软雅黑; font-size: 27px;">首先，夹竹桃具有较高的观赏价值，它的花期很长，而且一株夹竹桃开花的时候是一团团的，看上去非常漂亮。无论是栽种在道路还是公园里，都可以起到美化的效果。<br>
+其次是夹竹桃有抗烟雾、抗灰尘、抗毒物和净化空气、保护环境的能力。夹竹桃的叶片，对人体有毒、对二氧化硫、二氧化碳、氟化氢、氯气等有害气体有较强的抵抗作用。据测定，盆栽的夹竹桃，在距污染源40米处，仅受到轻度损害，170米处则基本无害，仍能正常开花，其叶片的含硫量比未污染的高7倍以上。夹竹桃即使全身落满了灰尘，仍能旺盛生长，被人们称为"环保卫士"。</h1>
+<img src="../image/夹竹桃/3bf33a87e950352abb9a738f0ec8d9fbb0118bd6.jpg"width="523" height="438"style="position: absolute; left: 276px; top: 2045px; width: 596px; height: 454px;">
+</body>
+</html>

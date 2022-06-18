@@ -1,0 +1,465 @@
+<!doctype html>
+<html>
+<head>
+<title>页面4</title>
+<style type="text/css">
+body1
+{
+  margin: 0;
+  padding: 0;
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #FFF;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0;
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #000;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background:#333;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+body {
+	margin: 0;
+	height: 100%;
+	background:#CAD7DB;
+}
+
+.button_container {
+	position: absolute;
+	left: 439px;
+	top: 618px;
+	width: 190px;
+	height: 125px;
+}
+
+.description, .link {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+}
+
+.description {
+	font-size: 35px;
+	color:#FFF;
+}
+
+.btn {
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 17px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn span {
+  position: relative; 
+  z-index: 1;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #78c7d2;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.link {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.link a {
+  color: #000;
+  font-size: 25px; 
+}
+.a{
+	color:#FFF;
+}	
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+	background:url(123video.gif);
+	background-size:100%;
+	position:relative;
+	background-repeat:no-repeat;
+  color:#FFF;
+}
+
+.container {
+	margin: 0 auto;
+	width: 261px;
+	max-width: 350px;
+	position:fixed;
+	left: 21px;
+	top: 200px;
+	height: 575px;
+}
+
+h2 {
+  padding: 1.8rem 0;
+  
+  font-size: 2.8rem;
+  
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.4);
+  
+}
+
+nav {
+  -webkit-box-flex: auto;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  position: relative;
+  padding: .6125rem .6152rem 1.6125rem;
+} 
+
+li a { 
+  text-decoration: none;
+  color: RGBA(67, 83, 99, 1);
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+ul:hover a {
+  opacity: .8;
+  
+  -webkit-transform: scale(0.97);
+  transform: scale(0.97);
+}
+
+ul a {
+  display: block;
+  position: relative;
+  padding: .75rem 1rem 1rem;
+  
+  -webkit-transition: -webkit-transform .22s,box-shadow .22s;
+  transition: transform .22s,box-shadow .22s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none;
+  box-shadow: 0 0 0 -.25rem rgba(0,0,0,.1);
+}
+
+ul a:focus, ul a:hover {
+  outline: 0;
+  box-shadow: 0 .5rem 0 -.25rem rgba(0,0,0,.1);
+  opacity: 1;
+  -webkit-transform: scale(1.03);
+  transform:scale(1.03);
+  -webkit-transition: -webkit-transform .088s,box-shadow .088s;
+  transition: transform .088s,box-shadow .088s;
+  z-index: 1;
+}
+
+.menu a:nth-child(1) {
+  background: #94bddb;
+}
+.menu a:nth-child(2) {
+  background: #94bddb;
+}
+.menu a:nth-child(3) {
+  background: #94bddb;
+}
+.menu a:nth-child(4) {
+  background: #94b9db;
+}
+.menu a:nth-child(5) {
+  background: #94b5db;
+}
+.menu a:nth-child(6) {
+  background: #94b2db;
+}
+
+.menu a:nth-child(6):hover {
+  cursor: pointer;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+    transform: perspective(400px) rotateX(-10deg);
+  }
+
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    -ms-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+    -ms-transform: perspective(400px) rotateX(-10deg);
+    transform: perspective(400px) rotateX(-10deg);
+  }
+
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    -ms-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    -ms-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.flipInX {
+  -webkit-backface-visibility: visible ;
+  -ms-backface-visibility: visible ;
+  backface-visibility: visible ;
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
+}
+</style>
+</head>
+<body>
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" >
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="../Personal_page.html"><li>个人主页</li></a>
+      <a href="../Personal_information.html"i,><li>个人信息</li></a>
+      <a href="../Ukraine.html"><li>作品1</li></a>
+      <a href="../首页.html"><li>作品2</li></a>
+      <a href="首页3.html"><li>作品3</li></a>
+    </ul>
+  </div>
+<a href="首页3.html"><img src="../image/logo5.png"style="position: absolute; top: 20px; width: 175px; height: 163px; left: 81px;"></a>
+<div class="container ta-c">
+  <nav class="menu animated flipInX">
+		<ul class="no-ls ta-l t-all">
+			<li>
+        <a href="2.html">
+          <h3>1.猴面包树</h3>
+          <p>&nbsp;</p>
+          </a>
+        </li>
+        <li>
+			          <a href="3.html">
+				            <h3>2.夹竹桃</h3>
+				            <p>&nbsp;</p>
+			          </a>
+        </li>
+        <li>
+			          <a href="4.html">
+				            <h3>3.金皮树</h3>
+		              <p>&nbsp;</p>
+			          </a>
+        </li>
+        <li>
+      			    <a href="5.html">
+				            <h3>4.箭毒木</h3>
+				            <p>当前位置</p>
+          </a>
+        </li>
+    	</ul>
+  </nav>
+</div>
+<h1 style="position: absolute; left: 450px; top: -11px; height: 187px; width: 469px; color: #000; height: 82px; font-family:隶书 ; font-size: 100px;">箭毒木</h1>
+<img src="../image/见血封喉/f603918fa0ec08fabc5b650859ee3d6d54fbdac2.jpg"width="856" height="1280"style="position: absolute; left: 666px; top: 265px; width: 296px; height: 324px;">
+
+<img src="../image/见血封喉/9213b07eca80653881874a6397dda144ad348255.jpg"width="368" height="310"style="position: absolute; left: 295px; top: 258px; width: 333px; height: 324px;">
+<img src="../image/见血封喉/09fa513d269759ee48cceb38b2fb43166c22dfa1.jpg"width="368" height="310"style="position: absolute; left: 1005px; top: 265px; width: 247px; height: 324px;">
+<h1 style="position: absolute; left: 293px; top: 585px; height: 187px; width: 997px; color: #000; height: 166px; font-family: 微软雅黑; font-size: 27px;">见血封喉（学名：Antiaris toxicaria Lesch.），又名箭毒木，多生于海拔1500米以下的雨林中，乔木，高25-40米，胸径30-40厘米；具乳白色树液，树皮灰色，春季开花。是一种剧毒植物和药用植物。箭毒木的乳白色汁液含有剧毒，一经接触人畜伤口，即可使中毒者心脏麻痹（心率失常导致），血管封闭，血液凝固，以至窒息死亡，所以人们称它为“见血封喉”。<br><br>
+在我们国家，见血封喉是三级保护植物，分布于广东（雷州半岛）、海南、广西、云南南部。斯里兰卡、印度（包括安达曼群岛）、缅甸、泰国、中南半岛、马来西亚、印度尼西亚。</h1><img src="../image/见血封喉/95eef01f3a292df5cf84ee7602796f6735a873d9.jpg"width="1200" height="799"style="position: absolute; left: 787px; top: 966px; width: 489px; height: 366px;">
+<h1 style="position: absolute; left: 289px; top: 960px; height: 187px; width: 469px; color: #000; height: 166px; font-family: 微软雅黑; font-size: 27px;">若仔细观察，就会发现，你的身边可能就有一棵这样的树木。
+乍一看，和一般的树木没什么区别，每年春季开花，夏季结果，果子成熟后呈紫黑色，和一般的小野果长得也很像，但这种果子是不能食用的，含有毒性，味道也很苦涩，并没有一般浆果的酸甜感。<br><br>见血封喉毒性最强的是树皮的乳白色汁液，汁液里含有多种有毒强心苷和苷元，当这些毒素一旦进入血液，会导致血液凝固，心脏麻痹，最终窒息死亡，所以才有了见血封喉的名字。<br><br>
+由于树木毒性很强，大部分见血封喉树都是被保护起来的，不允许随意砍伐，就连触摸都是要再三小心。</h1>
+<img src="../image/见血封喉/63d9f2d3572c11dff522579bdf6f51d7f603c263.jpg"width="622" height="464"style="position: absolute; left: 787px; top: 1343px; width: 431px; height: 249px;">
+<h1 style="position: absolute; left: 284px; top: 1617px; height: 187px; width: 407px; color: #000; height: 54px; font-family: 微软雅黑; font-size: 37px;">毒性再强，也能物尽其用</h1>
+<h1 style="position: absolute; left: 284px; top: 1688px; height: 187px; width: 951px; color: #000; height: 166px; font-family: 微软雅黑; font-size: 27px;">1、武器；
+<br><br>
+自从傣族猎人发现树枝有毒后，西双版纳的猎人们就会将见血封喉树的汁液，涂在箭、飞镖和吹镖上，用来制作武器狩猎。
+<br><br>
+值得一提的是，被这种毒液毒死的动物，原则上是可以食用的，因为这种毒素在消化道内没什么作用，在血液中效果明显。
+<br><br>
+在美洲的印第安人，也会利用这种毒素制作毒箭。在1859年，和英军交战的过程中使用了这种武器，也让侵略者尝到了“见血封喉”的滋味。</h1>
+<img src="../image/见血封喉/42a98226cffc1e17d0c401daf6d8c504728de9b6.jpg"width="1200" height="799"style="position: absolute; left: 429px; top: 2072px; width: 656px; height: 433px;">
+<h1 style="position: absolute; left: 274px; top: 2509px; height: 187px; width: 987px; color: #000; height: 166px; font-family: 微软雅黑; font-size: 27px;">2、中药
+<br><br>
+见血封喉是一种毒药也是一种中药，它的汁液和种子，均可入药。药量得当，有强心和催吐的功能。
+<br><br>
+尤其是其中的强心苷，常用作于强心药物，用来治疗心脏功能不全等疾病。</h1>
+<img src="../image/见血封喉/8865c5e19b41437a46fb9ac04b1d0583.gif"width="1200" height="799"style="position: absolute; left: 438px; top: 3029px; width: 656px; height: 433px;">
+<h1 style="position: absolute; left: 272px; top: 2780px; height: 187px; width: 991px; color: #000; height: 166px; font-family: 微软雅黑; font-size: 27px;">3、树皮做衣服
+<br><br>
+云南西双版纳的少数民族经常会用见血封喉的树皮制作衣服和床垫。
+<br><br>
+见血封喉树皮很厚，纤维细长柔软。树皮剥下后，在水中浸泡一个月去除毒性，再经过反复捶打冲洗，就能得到柔软保暖的材料，可用来制作衣服和褥垫。</h1>
+</body>
+</html>

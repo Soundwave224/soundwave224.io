@@ -1,0 +1,450 @@
+<!doctype html>
+<html>
+<head>
+<title>页面1</title>
+<style type="text/css">
+body1
+{
+  margin: 0;
+  padding: 0;
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #FFF;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0;
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #000;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background:#333;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+body {
+	margin: 0;
+	height: 100%;
+	background:#CAD7DB;
+}
+
+.button_container {
+	position: absolute;
+	left: 439px;
+	top: 618px;
+	width: 190px;
+	height: 125px;
+}
+
+.description, .link {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+}
+
+.description {
+	font-size: 35px;
+	color:#FFF;
+}
+
+.btn {
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 17px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn span {
+  position: relative; 
+  z-index: 1;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #78c7d2;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.link {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.link a {
+  color: #000;
+  font-size: 25px; 
+}
+.a{
+	color:#FFF;
+}	
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+	background:url(123video.gif);
+	background-size:100%;
+	position:relative;
+	background-repeat:no-repeat;
+  color:#FFF;
+}
+
+.container {
+	margin: 0 auto;
+	width: 261px;
+	max-width: 350px;
+	position:fixed;
+	left: 21px;
+	top: 200px;
+	height: 400px;
+}
+
+h2 {
+  padding: 1.8rem 0;
+  
+  font-size: 2.8rem;
+  
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.4);
+  
+}
+
+nav {
+  -webkit-box-flex: auto;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  position: relative;
+  padding: .6125rem .6152rem 1.6125rem;
+} 
+
+li a { 
+  text-decoration: none;
+  color: RGBA(67, 83, 99, 1);
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+ul:hover a {
+  opacity: .8;
+  
+  -webkit-transform: scale(0.97);
+  transform: scale(0.97);
+}
+
+ul a {
+  display: block;
+  position: relative;
+  padding: .75rem 1rem 1rem;
+  
+  -webkit-transition: -webkit-transform .22s,box-shadow .22s;
+  transition: transform .22s,box-shadow .22s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none;
+  box-shadow: 0 0 0 -.25rem rgba(0,0,0,.1);
+}
+
+ul a:focus, ul a:hover {
+  outline: 0;
+  box-shadow: 0 .5rem 0 -.25rem rgba(0,0,0,.1);
+  opacity: 1;
+  -webkit-transform: scale(1.03);
+  transform:scale(1.03);
+  -webkit-transition: -webkit-transform .088s,box-shadow .088s;
+  transition: transform .088s,box-shadow .088s;
+  z-index: 1;
+}
+
+.menu a:nth-child(1) {
+  background: #94bddb;
+}
+.menu a:nth-child(2) {
+  background: #94bddb;
+}
+.menu a:nth-child(3) {
+  background: #94bddb;
+}
+.menu a:nth-child(4) {
+  background: #94b9db;
+}
+.menu a:nth-child(5) {
+  background: #94b5db;
+}
+.menu a:nth-child(6) {
+  background: #94b2db;
+}
+
+.menu a:nth-child(6):hover {
+  cursor: pointer;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+    transform: perspective(400px) rotateX(-10deg);
+  }
+
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    -ms-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+    -ms-transform: perspective(400px) rotateX(-10deg);
+    transform: perspective(400px) rotateX(-10deg);
+  }
+
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    -ms-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    -ms-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.flipInX {
+  -webkit-backface-visibility: visible ;
+  -ms-backface-visibility: visible ;
+  backface-visibility: visible ;
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
+}
+</style>
+</head>
+<body>
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" >
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="../Personal_page.html"><li>个人主页</li></a>
+      <a href="../Personal_information.html"i,><li>个人信息</li></a>
+      <a href="../Ukraine.html"><li>作品1</li></a>
+      <a href="../首页.html"><li>作品2</li></a>
+      <a href="首页3.html"><li>作品3</li></a>
+    </ul>
+  </div>
+<a href="首页3.html"><img src="../image/logo2.png"style="position: absolute; top: 20px; width: 175px; height: 163px; left: 81px;"></a>
+<div class="container ta-c">
+  <nav class="menu animated flipInX">
+		<ul class="no-ls ta-l t-all">
+			<li>
+        <a href="2.html">
+          <h3>1.猴面包树</h3>
+          <p>当前位置</p>
+          </a>
+        </li>
+        <li>
+			          <a href="3.html">
+				            <h3>2.夹竹桃</h3>
+				            <p>&nbsp;</p>
+			          </a>
+        </li>
+        <li>
+			          <a href="4.html">
+				            <h3>3.金皮树</h3>
+				            <p>&nbsp;</p>
+			          </a>
+        </li>
+        <li>
+      			    <a href="5.html">
+				            <h3>4.箭毒木</h3>
+				            <p>&nbsp;</p>
+          </a>
+        </li>
+    	</ul>
+  </nav>
+</div>
+<h1 style="position: absolute; left: 450px; top: -11px; height: 187px; width: 469px; color: #000; height: 82px; font-family:隶书 ; font-size: 100px;">猴面包树</h1>
+<h1 style="position: absolute; left: 293px; top: 585px; height: 187px; width: 977px; color: #000; height: 166px; font-family: 微软雅黑; font-size: 27px;"><b>猴面包树</b>（学名：Adansonia digitata L.）又叫波巴布树、猢狲木或酸瓠树，是木棉科、猴面包树属的大型落叶乔木，分布于南非、博茨瓦纳、坦桑尼亚和马达加斯加等位于热带或亚热带非洲的国家，分布地局限于气候炎热、干燥的地区   。树干内部组织中贮水，高约20米左右。</h1>
+<img src="../image/猴面包树/f7246b600c3387444adb55531a7ad6f3d72aa006.jpg" width="436" height="356"style="position: absolute; left: 296px; top: 191px; width: 469px; height: 318px;">
+<img src="../image/猴面包树/4034970a304e251fd8b0a8f030d0931e7e3e53d6.jpg"width="448" height="320"style="position: absolute; left: 779px; top: 194px; width: 465px; height: 300px;">
+<h1 style="position: absolute; left: 291px; top: 783px; height: 187px; width: 534px; color: #000; height: 534px; font-family: 微软雅黑; font-size: 27px;">&nbsp;&nbsp;在大约2.4亿年前，原本生长在一块儿的猴面包树随着冈瓦纳大陆的分裂四散而开，到了现在，猴面包属仅存八个物种，其中有六个物种生活在马达加斯加岛除东部以外的其他地区，另外两种零星分布在非洲大陆和澳大利亚西北部。<br>
+<br>&nbsp;&nbsp;猴面包那粗大的树干，看起来就像个小水塔一样。为什么叫“猴面包树”？其实很好理解。顾名思义，这种树结出的椭圆形果实巨大，形状酷似面包一样，且果肉甘甜多汁，是猴子和猩猩十分喜爱的食物，故而得名。<br><br>&nbsp;&nbsp;实际上，猴面包树的木质很疏松，虽然外表看上去很粗壮，但内在都是中空的“假茎”结构，因此当非洲雨季来临时，它这种不太致密的木质结构就能大量吸水并将其储存在体内（最多可存12000升）。同时当地人也利用猴面包树的这个特性，在确保不伤及树根本的情况下，使用槽子在树干上打个洞出来蓄水，这样到了旱季，就能从这里获得水源。
+<img src="../image/猴面包树/574e9258d109b3ded6089fcfc2bf6c81810a4ce5.jpg"width="408" height="314"style="position: absolute; left: 552px; top: 5px; width: 450px; height: 376px;">
+<img src="../image/猴面包树/d1a20cf431adcbef61b505a1a2af2edda2cc9f97.jpg"width="446" height="342"style="position: absolute; left: 556px; top: 421px; width: 430px; height: 376px;">
+</h1>
+<h1 style="position: absolute; left: 847px; top: 1631px; height: 187px; width: 449px; color: #000; height: 534px; font-family: 微软雅黑; font-size: 27px;"><strong data-from-paste="1" data-diagnose-id="b8007ad5f20dd2078b152299c9a7a22d">它的果实、枝叶等可食用，有药用与经济价值<br><br>它的果实肉多汁多、酸甜可口，是果腹充饥之物，不仅猴子爱吃，人们将其烤制后松软香甜、味道更佳。果肉富含维生素C及微量无素，有较高抗氧化成分，可生吃，还可制作成清凉的饮料和调味品；外壳还可当瓢用。<br><br>在非洲几次大饥荒时代里，这种“天然面包”就代替食物拯救了无数非洲饥民的性命。
+<br><br>籽粒炒熟后可当零食；烘焙研磨后可当咖啡喝；将籽提炼为食用油，比花生油好吃。
+<br><br>它的树皮富含纤维素，很早以前人们用其织成布，也可做成绳子与器弦，还可造纸。
+<br><br>非洲蔬菜少，树叶成了是当地人喜爱的蔬菜，它富含维生素和钙质，做成汤很美味，捣碎可做调料，溶于牛奶还能作成可口的饮料。</h1>
+<img src="../image/猴面包树/9f510fb30f2442a7b692eb2e9636a241d013021f.jpg"width="580" height="380"style="position: absolute; left: 294px; top: 1593px; width: 522px; height: 376px;">
+<img src="../image/猴面包树/ac4bd11373f082020b78e3cd038ef4e7a9641bdc.jpg"width="580" height="380"style="position: absolute; left: 294px; top: 2107px; width: 522px; height: 376px;">
+</body>
+</html>
